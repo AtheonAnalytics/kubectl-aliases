@@ -40,6 +40,7 @@ def main():
         ('lo', 'logs -f', None, None),
         ('lop', 'logs -f -p', None, None),
         ('p', 'proxy', None, ['sys']),
+        ('t', 'top', None, None),
         ('pf', 'port-forward', None, ['sys']),
         ('g', 'get', None, None),
         ('d', 'describe', None, None),
@@ -48,14 +49,21 @@ def main():
         ]
 
     res = [
-        ('po', 'pods', ['g', 'd', 'rm'], None),
+        ('po', 'pods', ['g', 'd', 'rm', 't'], None),
         ('dep', 'deployment', ['g', 'd', 'rm'], None),
         ('svc', 'service', ['g', 'd', 'rm'], None),
         ('ing', 'ingress', ['g', 'd', 'rm'], None),
         ('cm', 'configmap', ['g', 'd', 'rm'], None),
         ('sec', 'secret', ['g', 'd', 'rm'], None),
-        ('no', 'nodes', ['g', 'd'], ['sys']),
+        ('ssec', 'sealedsecret', ['g', 'd', 'rm'], None),
+        ('jo', 'jobs', ['g', 'd', 'rm'], None),
+        ('cjo', 'cronjobs', ['g', 'd', 'rm'], None),
+        ('no', 'nodes', ['g', 'd', 't'], ['sys']),
         ('ns', 'namespaces', ['g', 'd', 'rm'], ['sys']),
+        ('pv', 'persistentvolume', ['g', 'd', 'rm'], None),
+        ('pvc', 'persistentvolumeclaim', ['g', 'd', 'rm'], None),
+        ('ss', 'statefulset', ['g', 'd', 'rm'], None),
+        ('hl', 'helmrelease', ['g', 'd', 'rm'], None)
         ]
     res_types = [r[0] for r in res]
 
@@ -181,6 +189,3 @@ def diff(a, b):
 
 if __name__ == '__main__':
     main()
-
-
-			
