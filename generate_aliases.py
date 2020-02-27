@@ -63,7 +63,9 @@ def main():
         ('pv', 'persistentvolume', ['g', 'd', 'rm'], None),
         ('pvc', 'persistentvolumeclaim', ['g', 'd', 'rm'], None),
         ('ss', 'statefulset', ['g', 'd', 'rm'], None),
-        ('hl', 'helmrelease', ['g', 'd', 'rm'], None)
+        ('hl', 'helmrelease', ['g', 'd', 'rm'], None),
+        ('cr', 'clusterrole', ['g', 'rm'], None),
+        ('cr', 'clusterrolebindings', ['g', 'rm'], None)
         ]
     res_types = [r[0] for r in res]
 
