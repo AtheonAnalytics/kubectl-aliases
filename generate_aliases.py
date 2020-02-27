@@ -65,7 +65,7 @@ def main():
         ('ss', 'statefulset', ['g', 'd', 'rm'], None),
         ('hl', 'helmrelease', ['g', 'd', 'rm'], None),
         ('cr', 'clusterrole', ['g', 'rm'], None),
-        ('cr', 'clusterrolebindings', ['g', 'rm'], None)
+        ('crb', 'clusterrolebindings', ['g', 'd', 'rm'], None)
         ]
     res_types = [r[0] for r in res]
 
